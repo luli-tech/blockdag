@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const KeyNote = ({ targetDate }) => {
+const KeyNote = ({ targetDate }: any) => {
   const calculateTimeLeft = () => {
     const difference = +new Date(targetDate) - +new Date();
     return {
