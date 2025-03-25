@@ -8,13 +8,6 @@ import CarouselDots from "@/components/carouselDots";
 
 export default function Home() {
   // Handle navigation click
-  const handleNavClick = (index: number) => {
-    // @ts-ignore
-    if (typeof window.moveBackground === "function") {
-      // @ts-ignore
-      window.moveBackground(index);
-    }
-  };
 
   return (
     <div>
@@ -23,7 +16,7 @@ export default function Home() {
         <AnimatedBackground />
 
         {/* Navigation */}
-        <NavigationMenu onNavClick={handleNavClick} />
+        <NavigationMenu />
 
         <div className="absolute 2-111111 carousel-control lg:bottom-[50%] w-full">
           <ArrowButtons />

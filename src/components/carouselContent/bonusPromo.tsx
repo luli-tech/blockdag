@@ -1,11 +1,11 @@
 import React from "react";
-
+import Image from "next/image";
 const BonusPromo = () => {
   return (
     <div className="relative text-white p-6 md:p-12 flex items-center">
       {/* Background Image */}
       <div className="absolute inset-0">
-        <img
+        <Image
           src="/mnt/data/image.png"
           alt="Inter Milan Players"
           className="w-full h-full object-cover opacity-20"
