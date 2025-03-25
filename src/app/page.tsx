@@ -5,7 +5,6 @@ import NavigationMenu from "@/components/navigation-menu";
 import PresaleSection from "@/components/presale-section";
 import ArrowButtons from "@/components/arrowAnchor";
 import CarouselDots from "@/components/carouselDots";
-import FlowbiteCarousel from "@/components/test";
 
 export default function Home() {
   // Handle navigation click

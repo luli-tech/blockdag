@@ -2,7 +2,6 @@
 import { useRef } from "react";
 import { useCarousel } from "@/lib/carouselContext";
 import carousel from "@/lib/carousel";
-import FlowbiteCarousel from "./test";
 
 export default function AnimatedBackground() {
   const { currentSlide } = useCarousel();

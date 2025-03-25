@@ -6,11 +6,7 @@ import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
-interface NavigationMenuProps {
-  onNavClick: (index: number) => void;
-}
-
-export default function NavigationMenu({ onNavClick }: NavigationMenuProps) {
+export default function NavigationMenu() {
   const [activeItem, setActiveItem] = useState<number | null>(null);
 
   const navItems = [
@@ -55,18 +51,13 @@ export default function NavigationMenu({ onNavClick }: NavigationMenuProps) {
 
   const handleNavItemClick = (index: number) => {
     setActiveItem(index === activeItem ? null : index);
-    onNavClick(index);
   };
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 transparent border-b border-gray-800">
       <div className="container mx-auto px-4">
         <div className="flex mx-auto items-center justify-between h-16">
-          <Link
-            href="/"
-            className="text-3xl font-bold text-white"
-            onClick={() => onNavClick(0)}
-          >
+          <Link href="/" className="text-3xl font-bold text-white">
             BlockDAG
           </Link>
 
