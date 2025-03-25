@@ -1,5 +1,5 @@
 import React from "react";
-
+import Image from "next/image";
 const Security = () => {
   return (
     <div className="relative text-white p-6 md:p-12 flex items-center justify-center text-left">
@@ -18,12 +18,12 @@ const Security = () => {
 
         {/* Logos */}
         <div className="flex items-center justify-center gap-4 mt-6">
-          <img
+          <Image
             src="/path-to-certik-logo.png"
             alt="Certik Logo"
             className="h-6 md:h-8"
           />
-          <img
+          <Image
             src="/path-to-hilborn-logo.png"
             alt="Hilborn Logo"
             className="h-6 md:h-8"

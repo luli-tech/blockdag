@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 
-const KeyNote = ({ targetDate }: any) => {
+const KeyNote = () => {
   const calculateTimeLeft = () => {
-    const difference = +new Date(targetDate) - +new Date();
+    const difference = +new Date(12) - +new Date();
     return {
       days: Math.floor(difference / (1000 * 60 * 60 * 24)),
       hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
@@ -18,7 +18,7 @@ const KeyNote = ({ targetDate }: any) => {
       setTimeLeft(calculateTimeLeft());
     }, 1000);
     return () => clearInterval(timer);
-  }, []);
+  }, [calculateTimeLeft]);
 
   return (
     <div className="flex flex-col justify-left text-white text-left">
