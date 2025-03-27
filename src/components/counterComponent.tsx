@@ -84,7 +84,7 @@ const CounterComponent = () => {
               { label: "SECONDS", value: seconds },
             ].map(({ label, value }, index) => (
               <React.Fragment key={label}>
-                <div className="bg-[#041a4a] border border-[#0a2a6a] rounded-md md:w-24 text-center">
+                <div className="bg-[#041a4a] border border-[#0a2a6a] w-20 rounded-md md:w-24 text-center">
                   <div className="relative overflow-hidden">
                     <div className="text-3xl md:text-5xl font-bold">
                       {value}
