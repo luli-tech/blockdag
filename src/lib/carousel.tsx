@@ -1,12 +1,13 @@
 import BonusPromo from "@/components/carouselContent/bonusPromo";
 import Security from "@/components/carouselContent/security";
 import CountdownTimer from "@/components/carouselContent/bonusTimer";
-import KeyNote from "@/components/carouselContent/keynote";
 import Raised from "@/components/carouselContent/raised";
+import CounterComponent from "@/components/counterComponent";
+
 const carousel = [
   {
     bg: "/download.jpeg",
-    content: <KeyNote />,
+    content: <CounterComponent />,
   },
   { bg: "/downloaded.jpeg", content: <BonusPromo /> },
 

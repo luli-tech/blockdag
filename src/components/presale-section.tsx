@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-
+import Image from "next/image";
 export default function PresaleSection() {
   const [isMobile, setIsMobile] = useState(false);
 
@@ -17,11 +17,7 @@ export default function PresaleSection() {
     <div className="mx-auto py-2">
       {/* Header Section */}
       <div className="flex mb-5 mx-auto w-[fit-content] items-center rounded-lg">
-        <img
-          src="/path-to-your-logo.png"
-          alt="Logo"
-          className="w-12 h-12 rounded-full"
-        />
+        <Image src="" alt="Logo" className="w-12 h-12 rounded-full" />
         <div className="w-px h-20 bg-white mx-4"></div>
         <p className="text-white font-semibold text-[8px]">
           OFFICIAL BLOCKCHAIN
