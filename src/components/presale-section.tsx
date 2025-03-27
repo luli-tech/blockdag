@@ -1,6 +1,13 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import applelogo from "../public/appplepaylogo.svg";
+import binaceLOgo from "../public/binanceLogo.jpg";
+import ethLogo from "../public/gpaylogo.png";
+import gpaylogog from "../public/gpaylogo.png";
+import usdtlogo from "../public/usdt.png";
+import visalogo from "../public/visalogo.jpg";
+
 export default function PresaleSection() {
   const [isMobile, setIsMobile] = useState(false);
 
@@ -25,16 +32,15 @@ export default function PresaleSection() {
           PARTNER
         </p>
       </div>
-      {/* Conditional Rendering Based on Screen Width */}
 
+      {/* Conditional Rendering Based on Screen Width */}
       <div
         className={`flex ${
           isMobile ? "flex-row" : "flex-col"
         } md:flex- px-2 w-fit mx-auto lg:flex-row md:flex-col items-center justify-center gap-4 bg-black/20 py-2 rounded-lg`}
       >
         {!isMobile && (
-          // Mobile View (Presale section for smaller screens)
-          <div className="flex h-full sm:flex items-center w-full mx-auto justify-between">
+          <div className="flex h-full  sm:flex items-center w-full mx-auto justify-between">
             <div className="text-xl md:text-2xl font-bold">
               Presale is <span className="text-green-400">Live</span>
             </div>
@@ -49,22 +55,17 @@ export default function PresaleSection() {
           </div>
         )}
 
-        <div className="flex mx-auto justify-center gap-2">
-          {["Ξ", "₮", "₿", "VISA", "MC", "G Pay", "aPay"].map((item, index) => (
-            <div
-              key={index}
-              className="bg-gray-700/80 rounded-md p-2 w-12 h-12 flex items-center justify-center text-white text-xs md:text-sm font-bold"
-            >
-              {item === "MC" ? (
-                <div className="flex flex-col items-center">
-                  <div className="w-4 h-2 bg-red-500 rounded-full"></div>
-                  <div className="w-4 h-2 bg-yellow-500 rounded-full -mt-0.5"></div>
-                </div>
-              ) : (
-                item
-              )}
-            </div>
-          ))}
+        <div className="flex bg-gray-700/50 p-2 mx-auto justify-center gap-1">
+          {[applelogo, binaceLOgo, ethLogo, gpaylogog, usdtlogo, visalogo].map(
+            (icon, index) => (
+              <div
+                key={index}
+                className="bg-gray-700/80 rounded-md p-1 w-15 flex items-center justify-center"
+              >
+                <Image src={icon} alt="Payment Icon" className="w-4 h-4" />
+              </div>
+            )
+          )}
         </div>
 
         {isMobile && (

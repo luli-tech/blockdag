@@ -29,8 +29,8 @@ export default function AnimatedBackground() {
       }}
     >
       <div
-        className={`absolute w-full mx-auto left-[0%] md:top-[20%] md:left-[0%] ${
-          isMobile ? "top-[12%] right-[20%]" : "top-[10%] right-[0%]"
+        className={`absolute flex justify-center w-full mx-auto left-[0%] md:top-[20%] md:left-[0%] ${
+          isMobile ? "top-[12%] right-[0%]" : "top-[10%] right-[0%]"
         } z-1 `}
       >
         <CounterComponent />

@@ -6,17 +6,16 @@ const CounterComponent = () => {
   const [minutes, setMinutes] = useState("20");
   const [seconds, setSeconds] = useState("03");
   const [key, setKey] = useState(0);
-  // const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
-  // Handle window resize
-  // useEffect(() => {
-  //   const handleResize = () => {
-  //     setIsMobile(window.innerWidth > 1000);
-  //   };
-  //   handleResize(); // Set initial state
-  //   window.addEventListener("resize", handleResize);
-  //   return () => window.removeEventListener("resize", handleResize);
-  // }, []);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 1000);
+    };
+    handleResize(); // Set initial state
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   // Countdown logic
   const updateCountdown = useCallback(() => {
@@ -56,7 +55,7 @@ const CounterComponent = () => {
 
   return (
     <div className="container w-full relative z-20">
-      <div className="flex gap-8 justify-center lg:justify-left md:justify-left">
+      <div className="flex gap-8 justify-center lg:justify-center md:justify-center">
         <div className="text-white lg:text-left text-center">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl md:text-5xl font-bold py-1">
             KEYNOTE 3
@@ -72,7 +71,12 @@ const CounterComponent = () => {
           </div>
 
           {/* Countdown Timer */}
-          <div className="flex md:space-x-4 mx-auto mb-12" key={key}>
+          <div
+            className={`flex flex-col${
+              !isMobile ? "justify-start" : "justify-center"
+            } justify-center w-[100%] sm:justify-center md:justify-center lg:justify-start mx-auto mb-12`}
+            key={key}
+          >
             {[
               { label: "DAYS", value: days },
               { label: "HOURS", value: hours },
